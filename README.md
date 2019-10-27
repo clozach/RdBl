@@ -68,4 +68,26 @@ Alright. I think that's a spec! Now, for the architecture.
 
 - [x] Get minimal example running.
 - [x] Test run on-page text replacement: Replace every instance of "the" with "🤘".
-- [ ] Add basic styles to highlight replaced text.
+- [x] Add basic styles to highlight replaced text.
+- [ ] Convert `rdbl.js` to a svelte app
+  - Pure refactor, please: no behavior change for now.
+  - Change manifest to point to bundle.js
+  - Change package.json to put bundle.js where needed for extension to continue functioning.
+- [ ] Adding a new entry
+  - [ ] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
+    - [ ] / with no selection is a no op (or displays a quick help blurb)
+    - [ ] / with too much selection (selection.anchorNode !== selection.focusNode), ditto.
+  - [ ] Entry editing UI
+    - [ ] Label w/styles. Content === original phrase
+    - [ ] Text field w/styles
+      - [ ] Gray placeholder text: `in your own words…`
+      - [ ] Persist with each character typed
+      - [ ] `return` or `esc` or ` ⌘``return ` to dismiss
+- [ ] Styles on replacement text
+- [ ] `/` to toggle term/def
+
+contenteditable=true for inline editing (sweet!)
+
+LocalStorage.foo = bar (not sure what model will look like yet.)
+
+var foo = foo = window.getSelection()

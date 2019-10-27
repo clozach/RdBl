@@ -1,6 +1,19 @@
 
 var haystackText = "";
 
+const styles = `
+.rdbl {
+  padding: .1rem;
+  border-radius: .5rem;
+  background-image: linear-gradient(to right, hsla(275, 89%, 68%, 0.5) 0%, hsla(300, 97%, 76%, 0.5) 51%, hsla(46, 89%, 68%, .5) 100%)
+}
+`
+
+const addStyles = (styleString) => {
+  var firstStyleTag = document.getElementsByTagName("style")[0]
+  firstStyleTag.textContent = firstStyleTag.textContent + styleString
+}
+
 function findMyText(needle, replacement) {
 
   const targetNode = () => document.body
@@ -22,4 +35,5 @@ function findMyText(needle, replacement) {
   targetNode().innerHTML = replaced;
 }
 
-findMyText("the", "🤘")
+addStyles(styles)
+findMyText(" the ", ` <span class="rdbl">&nbsp;the&nbsp;</span> `)
