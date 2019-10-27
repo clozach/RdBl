@@ -62,4 +62,9 @@ Alright. I think that's a spec! Now, for the architecture.
 - The above-mentioned [script](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript) for text replacement
 - Custom code to generate html snippets and wrap the term and/or definition accordingly
 - LocalStorage for persistence…at first. Maybe Firebase once it's time to offer multi-session support?
-- Read [this](https://thoughtbot.com/blog/how-to-make-a-chrome-extension) and/or the official docs. Make their project, then make mine.
+- [ ] Read [this](https://thoughtbot.com/blog/how-to-make-a-chrome-extension) and/or the official docs. Make their project, then make mine.
+
+## Progress
+
+- [x] Get minimal example running.
+- [ ]
