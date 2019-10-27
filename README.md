@@ -67,4 +67,5 @@ Alright. I think that's a spec! Now, for the architecture.
 ## Progress
 
 - [x] Get minimal example running.
-- [ ]
+- [x] Test run on-page text replacement: Replace every instance of "the" with "🤘".
+- [ ] Add basic styles to highlight replaced text.
