@@ -28,11 +28,12 @@ function findMyText(needle, replacement) {
     haystackText = targetNode().innerHTML;
   }
 
-  var match = new RegExp(needle, "ig");
+  var re = `([> ])${needle}([ <])`;
+  var match = new RegExp(re, "ig");
   var replaced = "";
 
   if (replacement.length > 0) {
-    replaced = haystackText.replace(match, replacement);
+    replaced = haystackText.replace(match, `$1${replacement}$2`);
   } else {
     var boldText = "<div style=\"background-color: yellow; display: inline; font-weight: bold;\">" + needle + "</div>";
     replaced = haystackText.replace(match, boldText);
@@ -42,4 +43,4 @@ function findMyText(needle, replacement) {
 }
 
 addStyles(styles)
-findMyText(" the ", ` <span class="rdbl">&nbsp;the&nbsp;</span> `)
+findMyText("the", ` <span class="rdbl">&nbsp;the&nbsp;</span> `)
