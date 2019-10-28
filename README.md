@@ -79,7 +79,7 @@ Alright. I think that's a spec! Now, for the architecture.
 - [ ] Adding a new entry
   - [x] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
     - [x] / with no selection is a no op (or displays a quick help blurb)
-    - [ ] / with too much selection (selection.anchorNode !== selection.focusNode), ditto.
+    - [x] / with too much selection (selection.anchorNode !== selection.focusNode), ditto.
   - [ ] Entry editing UI
     - [ ] Label w/styles. Content === original phrase
     - [ ] Text field w/styles

@@ -51,11 +51,26 @@
   function slashHandler() {
     const validate = windowSelection => {
       const str = windowSelection.toString();
+
       if (str.length === 0) {
         return {
           error: `You haven't made a selection. Highlight a word or phrase before activating RdBl with the "/" key.`
         };
       }
+
+      if (windowSelection.anchorNode !== windowSelection.focusNode) {
+        // 📝 It's possible to have both tag names below "seem" identical.
+        // Calling this "good-enough for now" as I'm the only user, but
+        // this could definitely be improved!
+        return {
+          error: `RdBl is pretty simple right now. It can only handle selections within a single HTML tag. You've currently got these tags selected: ${windowSelection
+            .anchorNode.tagName ||
+            windowSelection.anchorNode.parentElement
+              .tagName} & ${windowSelection.focusNode.tagName ||
+            windowSelection.focusNode.parentElement.tagName}`
+        };
+      }
+
       return { value: str };
     };
 
