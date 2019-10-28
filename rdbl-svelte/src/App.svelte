@@ -1,4 +1,7 @@
 <script>
+  import { onMount } from "svelte";
+  import Mousetrap from "mousetrap";
+
   export const styles = `
 .rdbl {
   padding: .1rem;
@@ -41,4 +44,10 @@
 
     targetNode().innerHTML = replaced;
   }
+
+  const slashHandler = () => {
+    alert("💙" + window.getSelection());
+  };
+
+  Mousetrap.bind("/", slashHandler);
 </script>

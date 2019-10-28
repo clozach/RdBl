@@ -75,7 +75,7 @@ Alright. I think that's a spec! Now, for the architecture.
   - [x] Change ~~package.json~~ rollup config to put bundle.js where needed for extension to continue functioning.
   - [x] Extract as much as possible from rdbl.js so I can take full advantage of Svelte.
 - [ ] Adding a new entry
-  - [ ] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
+  - [x] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
     - [ ] / with no selection is a no op (or displays a quick help blurb)
     - [ ] / with too much selection (selection.anchorNode !== selection.focusNode), ditto.
   - [ ] Entry editing UI
