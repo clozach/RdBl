@@ -73,7 +73,7 @@ Alright. I think that's a spec! Now, for the architecture.
   - [x] Pure refactor, please: no behavior change for now.
   - [x] Change manifest to point to bundle.js
   - [x] Change ~~package.json~~ rollup config to put bundle.js where needed for extension to continue functioning.
-  - [ ] Extract as much as possible from rdbl.js so I can take full advantage of Svelte.
+  - [x] Extract as much as possible from rdbl.js so I can take full advantage of Svelte.
 - [ ] Adding a new entry
   - [ ] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
     - [ ] / with no selection is a no op (or displays a quick help blurb)
