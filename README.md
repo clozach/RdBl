@@ -69,10 +69,11 @@ Alright. I think that's a spec! Now, for the architecture.
 - [x] Get minimal example running.
 - [x] Test run on-page text replacement: Replace every instance of "the" with "🤘".
 - [x] Add basic styles to highlight replaced text.
-- [ ] Convert `rdbl.js` to a svelte app
-  - Pure refactor, please: no behavior change for now.
-  - Change manifest to point to bundle.js
-  - Change package.json to put bundle.js where needed for extension to continue functioning.
+- [x] Convert `rdbl.js` to a svelte app
+  - [x] Pure refactor, please: no behavior change for now.
+  - [x] Change manifest to point to bundle.js
+  - [x] Change ~~package.json~~ rollup config to put bundle.js where needed for extension to continue functioning.
+  - [ ] Extract as much as possible from rdbl.js so I can take full advantage of Svelte.
 - [ ] Adding a new entry
   - [ ] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
     - [ ] / with no selection is a no op (or displays a quick help blurb)
