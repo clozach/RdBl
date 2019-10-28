@@ -49,17 +49,23 @@
   }
 
   function slashHandler() {
-    const windowSelection = () => {
-      const selection = window.getSelection().toString();
-      return selection.length > 0 ? selection.toString() : false;
+    const validate = windowSelection => {
+      const str = windowSelection.toString();
+      if (str.length === 0) {
+        return {
+          error: `You haven't made a selection. Highlight a word or phrase before activating RdBl with the "/" key.`
+        };
+      }
+      return { value: str };
     };
 
-    const selection = windowSelection();
+    const selection = window.getSelection();
+    const validated = validate(selection);
 
-    if (selection) {
-      console.log("🧧" + selection);
+    if (validated.error) {
+      information = validated.error;
     } else {
-      information = `You haven't made a selection. Highlight a word or phrase before activating RdBl with the "/" key.`;
+      console.log("🧧" + validated.value);
     }
   }
 
