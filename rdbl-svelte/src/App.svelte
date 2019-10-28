@@ -10,6 +10,24 @@
 }
 `;
 
+  const helpId = "rdbl-help";
+
+  let information = "";
+
+  // Display `information` to the user for a few seconds
+  $: if (information.length > 0) {
+    var help = document.createElement("div");
+    help.textContent = information;
+    help.id = helpId;
+    help.style =
+      "position:absolute; top: 0; width: calc(100vw-.5rem); padding: 3rem; margin: .5rem; background: #ffffffcc; color: #0f0f0f; font-size: 3rem; font-family: Courier";
+    document.body.append(help);
+    setTimeout(() => {
+      help.remove();
+      information = "";
+    }, 5000);
+  }
+
   export const addStyles = styleString => {
     const firstStyleTag = document.getElementsByTagName("style")[0];
     if (firstStyleTag) {
@@ -45,9 +63,20 @@
     targetNode().innerHTML = replaced;
   }
 
-  const slashHandler = () => {
-    alert("💙" + window.getSelection());
-  };
+  function slashHandler() {
+    const windowSelection = () => {
+      const selection = window.getSelection().toString();
+      return selection.length > 0 ? selection.toString() : false;
+    };
+
+    const selection = windowSelection();
+
+    if (selection) {
+      console.log("🧧" + selection);
+    } else {
+      information = `You haven't made a selection. Highlight a word or phrase before activating RdBl with the "/" key.`;
+    }
+  }
 
   Mousetrap.bind("/", slashHandler);
 </script>
