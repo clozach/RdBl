@@ -1,5 +1,7 @@
 # Codename RdBl (pronounced "readable")
 
+Note for later…when I rewrite this readme: create a visual diagram the data flow so it's easy for newcomers (and an older me) to see how Svelte and Chrome's extensions manifest tie together.
+
 ## What is it?
 
 Glad you asked. It's basically flash cards, but inlined into every piece of textual content you see in your browser. Except maybe PDFs. Doesn't matter.
