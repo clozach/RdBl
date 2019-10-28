@@ -10,8 +10,14 @@ const styles = `
 `
 
 const addStyles = (styleString) => {
-  var firstStyleTag = document.getElementsByTagName("style")[0]
-  firstStyleTag.textContent = firstStyleTag.textContent + styleString
+  const firstStyleTag = document.getElementsByTagName("style")[0]
+  if (firstStyleTag) {
+    firstStyleTag.textContent = firstStyleTag.textContent + styleString
+  } else {
+    const node = document.createElement("style");
+    node.textContent = styleString;
+    document.head.appendChild(node)
+  }
 }
 
 function findMyText(needle, replacement) {
