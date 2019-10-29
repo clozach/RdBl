@@ -1,7 +1,9 @@
 <script>
   import { onMount } from "svelte";
+  import { editingTerm, dictionary } from "./Store.js";
   import Mousetrap from "mousetrap";
   import Help from "./Help.svelte";
+  import Editor from "./Editor.svelte";
 
   export const styles = `
 .rdbl {
@@ -79,8 +81,8 @@
 
     if (validated.error) {
       information = validated.error;
-    } else {
-      console.log("🧧" + validated.value);
+    } else if (validated.value) {
+      editingTerm.set(validated.value);
     }
   }
 
@@ -88,3 +90,5 @@
 </script>
 
 <Help bind:information />
+<Editor />
+{JSON.stringify($dictionary)}

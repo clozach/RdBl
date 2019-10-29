@@ -80,14 +80,18 @@ Alright. I think that's a spec! Now, for the architecture.
   - [x] Add / keyboard shortcut to capture the current selection (and nothing else, for now)
     - [x] / with no selection is a no op (or displays a quick help blurb)
     - [x] / with too much selection (selection.anchorNode !== selection.focusNode), ditto.
-  - [ ] Entry editing UI
-    - [ ] Label w/styles. Content === original phrase
-    - [ ] Text field w/styles
+  - [-] Entry editing UI
+    - [x] Label w/styles. Content === original phrase
+    - [-] Text field w/styles
       - [ ] Gray placeholder text: `in your own words…`
       - [ ] Persist with each character typed
       - [ ] `return` or `esc` or ` ⌘``return ` to dismiss
 - [ ] Styles on replacement text
 - [ ] `/` to toggle term/def
+
+# MAYBE DO THIS NEXT????
+
+- [ ] Spike a version where Svelte _does_ have its own index.html, used for rapid testing purposes? I think this might work, on second thought!
 
 contenteditable=true for inline editing (sweet!)
 
