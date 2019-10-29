@@ -83,9 +83,9 @@ Alright. I think that's a spec! Now, for the architecture.
   - [-] Entry editing UI
     - [x] Label w/styles. Content === original phrase
     - [-] Text field w/styles
-      - [ ] Gray placeholder text: `in your own words…`
-      - [ ] Persist with each character typed
-      - [ ] `return` or `esc` or ` ⌘``return ` to dismiss
+      - [x] Gray placeholder text: `in your own words…`
+      - [x] Persist on `return`
+      - [x] `esc` or click on overlay to dismiss
 - [ ] Styles on replacement text
 - [ ] `/` to toggle term/def
 
