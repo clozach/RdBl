@@ -72,10 +72,14 @@
   <div id="rdbl-editor">
     <div class="padding">
       <div class="visible-rect">
-        <div class="term">Term: {term}</div>
+        <!-- svelte-ignore a11y-autofocus -->
+        <label for="definition" class="term" tabindex="0" autofocus>
+          Enter your replacement for: {term}
+        </label>
         <input
           bind:value={def}
           class="mousetrap"
+          name="definition"
           placeholder={def.length > 0 ? '' : 'in your own words…'} />
       </div>
     </div>
