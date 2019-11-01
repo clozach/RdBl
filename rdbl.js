@@ -1,8 +1,6 @@
 
 var haystackText = "";
 
-app.addStyles(app.styles)
-
 let on = false;
 
 chrome.runtime.onMessage.addListener(

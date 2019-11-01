@@ -6,14 +6,6 @@
   import Help from "./Help.svelte";
   import Editor from "./Editor.svelte";
 
-  export const styles = `
-.rdbl {
-  padding: .1rem;
-  border-radius: .5rem;
-  background-image: linear-gradient(to right, hsla(275, 89%, 68%, 0.5) 0%, hsla(300, 97%, 76%, 0.5) 51%, hsla(46, 89%, 68%, .5) 100%)
-}
-`;
-
   let information = "";
 
   dictionary.subscribe(model => {
@@ -24,12 +16,21 @@
           `([^(0-9)^(a-z)^(A-Z)])${term}([^(0-9)^(a-z)^(A-Z)])`,
           "gi"
         ),
-        replace: `$1${definition}$2`
+        replace: ` $1${definition}$2 `,
+        wrap: "span",
+        wrapClass: "rdbl"
       });
     }
   });
 
-  export const addStyles = styleString => {
+  export const addStyles = () => {
+    const styleString = `
+      .rdbl {
+        padding: .1rem;
+        border-radius: .5rem;
+        background-image: linear-gradient(to right, hsla(275, 89%, 68%, 0.5) 0%, hsla(300, 97%, 76%, 0.5) 51%, hsla(46, 89%, 68%, .5) 100%)
+      }
+    `;
     const firstStyleTag = document.getElementsByTagName("style")[0];
     if (firstStyleTag) {
       firstStyleTag.textContent = firstStyleTag.textContent + styleString;
@@ -101,6 +102,8 @@
   }
 
   Mousetrap.bind("/", slashHandler);
+
+  onMount(addStyles);
 </script>
 
 <Help bind:information />
