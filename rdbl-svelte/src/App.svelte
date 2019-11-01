@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import findAndReplaceDOMText from "findandreplacedomtext";
   import { editingTerm, dictionary } from "./Store.js";
   import Mousetrap from "mousetrap";
   import Help from "./Help.svelte";
@@ -14,6 +15,19 @@
 `;
 
   let information = "";
+
+  dictionary.subscribe(model => {
+    console.log(`model: ${JSON.stringify(model)}`);
+    for (const [term, definition] of Object.entries(model)) {
+      findAndReplaceDOMText(document.body, {
+        find: new RegExp(
+          `([^(0-9)^(a-z)^(A-Z)])${term}([^(0-9)^(a-z)^(A-Z)])`,
+          "gi"
+        ),
+        replace: `$1${definition}$2`
+      });
+    }
+  });
 
   export const addStyles = styleString => {
     const firstStyleTag = document.getElementsByTagName("style")[0];
