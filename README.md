@@ -2,6 +2,10 @@
 
 Note for later…when I rewrite this readme: create a visual diagram the data flow so it's easy for newcomers (and an older me) to see how Svelte and Chrome's extensions manifest tie together.
 
+> ⚠️ This README is in dire need of an update.
+>
+> Please stay tuned…or, if you're interested in this project, pester me and I'll move documentation up in my list of priorities. 🤓
+
 ## What is it?
 
 Glad you asked. It's basically flash cards, but inlined into every piece of textual content you see in your browser. Except maybe PDFs. Doesn't matter.

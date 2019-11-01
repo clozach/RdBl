@@ -9,7 +9,6 @@
   let information = "";
 
   dictionary.subscribe(model => {
-    console.log(`model: ${JSON.stringify(model)}`);
     for (const [term, definition] of Object.entries(model)) {
       findAndReplaceDOMText(document.body, {
         find: new RegExp(
@@ -40,30 +39,6 @@
       document.head.appendChild(node);
     }
   };
-
-  export function findMyText(needle, replacement) {
-    const targetNode = () => document.body;
-
-    if (haystackText.length == 0) {
-      haystackText = targetNode().innerHTML;
-    }
-
-    var re = `([> ])${needle}([ <])`;
-    var match = new RegExp(re, "ig");
-    var replaced = "";
-
-    if (replacement.length > 0) {
-      replaced = haystackText.replace(match, `$1${replacement}$2`);
-    } else {
-      var boldText =
-        '<div style="background-color: yellow; display: inline; font-weight: bold;">' +
-        needle +
-        "</div>";
-      replaced = haystackText.replace(match, boldText);
-    }
-
-    targetNode().innerHTML = replaced;
-  }
 
   function slashHandler() {
     const validate = windowSelection => {
