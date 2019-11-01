@@ -105,4 +105,4 @@
 
 <Help bind:information />
 <Editor />
-{JSON.stringify($dictionary)}
+<!-- {JSON.stringify($dictionary)} -->

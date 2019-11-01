@@ -29,28 +29,32 @@
     top: 0;
     left: 0;
     width: 100%;
+    font-size: 40px;
   }
 
   .padding {
-    padding: 2rem;
+    padding: 2em;
   }
 
   .visible-rect {
     font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter",
       monospace;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    box-shadow: 0.1rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.25);
+    padding: 0.5em 1em 0.5em 1em;
+    box-shadow: 0.1em 0.2em 0.3em hsla(0, 0%, 0%, 0.25);
     background-color: #fffffff2;
-    border: 0.07rem gray solid;
-    border-radius: 0.3rem;
+    border: 0.07em gray solid;
+    border-radius: 0.3em;
   }
 
   .term {
-    margin: 0.5rem 0;
+    margin: 0.5em 0;
+    color: black;
   }
 
   input {
     width: 90%;
+    font-size: 0.7em;
+    padding: 0.5em;
   }
 
   .overlay {
