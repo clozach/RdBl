@@ -15,7 +15,7 @@
           `([^(0-9)^(a-z)^(A-Z)])${term}([^(0-9)^(a-z)^(A-Z)])`,
           "gi"
         ),
-        replace: ` $1${definition}$2 `,
+        replace: `$1${definition}$2`,
         wrap: "span",
         wrapClass: "rdbl"
       });
@@ -25,9 +25,11 @@
   export const addStyles = () => {
     const styleString = `
       .rdbl {
-        padding: .1rem;
-        border-radius: .5rem;
-        background-image: linear-gradient(to right, hsla(275, 89%, 68%, 0.5) 0%, hsla(300, 97%, 76%, 0.5) 51%, hsla(46, 89%, 68%, .5) 100%)
+        line-height: normal;
+        background: #EEF9F2;
+        border-radius: .1rem;
+        font-size: 95%;
+        padding: 0.2rem 0.2rem;
       }
     `;
     const firstStyleTag = document.getElementsByTagName("style")[0];
